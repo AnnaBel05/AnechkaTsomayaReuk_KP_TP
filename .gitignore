@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/14122021/WebApplicationMVC_2/WebApplicationMVC_2/wwwroot/lib/jquery/dist/jquery.js
+/14122021/WebApplicationMVC_2/WebApplicationMVC_2/wwwroot/lib/jquery/dist

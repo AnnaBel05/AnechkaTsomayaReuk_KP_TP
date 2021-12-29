@@ -1,0 +1,85 @@
+﻿@model IEnumerable<WebApplicationMVC_2.Models.Student>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Студенты</h1>
+
+<p>
+    <a asp-action="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditCardNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EducationalFormId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Group)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrainingTypeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ScholarshipType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ScholarshipAmount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <p>@Html.DisplayFor(modelItem => item.LastName)</p>   
+                <p>@Html.DisplayFor(modelItem => item.FirstName)</p>
+                <p>@Html.DisplayFor(modelItem => item.MiddleName)</p>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreditCardNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EducationalForm.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Group.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrainingType.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScholarshipType.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScholarshipAmount)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Изменить</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Информация</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

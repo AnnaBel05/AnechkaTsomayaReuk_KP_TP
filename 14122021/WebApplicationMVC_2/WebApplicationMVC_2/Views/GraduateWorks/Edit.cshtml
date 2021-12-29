@@ -1,0 +1,51 @@
+﻿@model WebApplicationMVC_2.Models.GraduateWork
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Изменить</h1>
+
+<h4>Дипломная работа</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Topic" class="control-label"></label>
+                <input asp-for="Topic" class="form-control" />
+                <span asp-validation-for="Topic" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentId" class="control-label"></label>
+                <select asp-for="StudentId" class="form-control" asp-items="ViewBag.StudentId"></select>
+                <span asp-validation-for="StudentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmployeeId" class="control-label"></label>
+                <select asp-for="EmployeeId" class="form-control" asp-items="ViewBag.EmployeeId"></select>
+                <span asp-validation-for="EmployeeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValueId" class="control-label"></label>
+                <select asp-for="ValueId" class="form-control" asp-items="ViewBag.ValueId"></select>
+                <span asp-validation-for="ValueId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkStatusId" class="control-label"></label>
+                <select asp-for="WorkStatusId" class="form-control" asp-items="ViewBag.WorkStatusId"></select>
+                <span asp-validation-for="WorkStatusId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Вернуться к списку</a>
+</div>
+

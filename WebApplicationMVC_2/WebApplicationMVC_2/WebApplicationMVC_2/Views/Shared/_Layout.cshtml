@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"]</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    </head>
+    <body>
+		<nav class="navbar navbar-inverse">
+        <!--меню-->
+			<div class="container">
+				<div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="~/Users/Login" class="navbar-brand">Вход</a></li>
+                    </ul>
+                </div>
+				<div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="~/Users/Create" class="navbar-brand">Регистрация</a></li>
+                    </ul>
+                </div>
+				<div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="~/Users/Index" class="navbar-brand">Пользователи</a></li>
+                    </ul>
+                </div>
+			</div>
+		</nav>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="~/Home/Index" class="navbar-brand">Главная</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="~/Courses/Index" class="navbar-brand">Дисциплины</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="~/Groups/Index" class="navbar-brand">Группы</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="~/Employees/Index" class="navbar-brand">Сотрудники</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="~/Students/Index" class="navbar-brand">Студенты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="~/Marks/Index" class="navbar-brand">Оценки</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="~/Visits/Index" class="navbar-brand">Пропуски</a></li>
+                    </ul>
+                </div>
+				
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="~/Activities/Index" class="navbar-brand">Активности</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="~/GraduateWorks/Index" class="navbar-brand">Дипломы</a></li>
+                    </ul>
+                </div>
+				
+            </div>
+        </nav>
+        <!--основной контент-->
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>© 2021 - гр. ИСТ-119, Реук А.В. и Денисюк Д.М.</p>
+            </footer>
+        </div>
+    </body>
+</html>
